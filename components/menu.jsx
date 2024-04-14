@@ -17,7 +17,7 @@ const Menu = () => {
         </div>
       </div>
 
-      <div>
+      <div className="hidden md:block">
         <MenuTitle subheading={"Explore"} heading={"Categories"} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-8">
           <CategoryLinks />

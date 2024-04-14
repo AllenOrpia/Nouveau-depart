@@ -9,7 +9,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col p-24">
         <Featured />
         <CategoryList />
-        <div className="flex gap-12">
+        <div className="flex flex-col lg:flex-row gap-12">
           <CardList />
           <Menu />
         </div>

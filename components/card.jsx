@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const Card = () => {
   return (
-    <div id="post" className="mb-12 flex items-center gap-10">
-      <div className="flex-1 h-[350px] relative">
-        <Image src={culture} className=" object-cover" alt="" fill/>
+    <div id="post" className="mb-12 flex flex-col lg:flex-row items-center gap-10">
+      <div className="flex-1 h-96 relative">
+        <Image src={culture} className="object-cover " alt="" fill />
       </div>
       <div className="flex-1 flex flex-col gap-5">
         <div>
