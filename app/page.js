@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col p-24">
+    <div className="container mx-auto flex min-h-screen flex-col p-12 sm:p-8 lg:p-0">
         <Featured />
         <CategoryList />
         <div className="flex flex-col lg:flex-row gap-12">
