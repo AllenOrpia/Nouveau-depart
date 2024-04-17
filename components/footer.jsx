@@ -6,7 +6,7 @@ import Linkedin from "@/public/LI-In-Bug.png";
 
 const Footer = () => {
   return (
-    <footer className="container mx-auto flex flex-col md:flex-row justify-between md:items-center gap-3 p-12 md:-8 lg:p-0">
+    <footer className="container mx-auto flex flex-col md:flex-row justify-between md:items-center gap-3 p-12 md:-8 lg:px-0 lg:py-12 ">
       <div className="flex-1 flex flex-col gap-2 ">
         <h3 className="text-xl font-bold">Noveau Depart</h3>
         <p>

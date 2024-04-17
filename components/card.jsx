@@ -10,10 +10,7 @@ const Card = () => {
         <Image src={culture} className="object-cover " alt="" fill />
       </div>
       <div className="flex-1 flex flex-col gap-5">
-        <div>
-          <span className="text-gray-400">11.02.2023 - </span>
-          <span className="text-red-500 font-medium text-lg">Culture</span>
-        </div>
+       
         <Link href={""}>
           <h3 className="text-3xl font-bold">Lorem ipsum dolor sit amet</h3>
         </Link>
@@ -23,6 +20,10 @@ const Card = () => {
           expedita harum asperiores omnis laboriosam. Doloribus quam quae nam
           culpa?
         </p>
+        <div>
+          <span className="text-gray-400">11.02.2023 - </span>
+          <span className="text-red-500 font-medium text-lg">Culture</span>
+        </div>
         <Link href={""} className="underline underline-offset-4">Read More</Link>
       </div>
     </div>
