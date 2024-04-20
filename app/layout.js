@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ThemeContextProvider from "@/context/theme-context";
 import ThemeProvider from "@/providers/theme-provider";
+import AuthProvider from "@/providers/auth-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,13 +19,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 min-w-[100vw] `}
       >
-        <ThemeContextProvider>
-          <ThemeProvider>
-            <Header />
-            {children}
-            <Footer />
-          </ThemeProvider>
-        </ThemeContextProvider>
+        <AuthProvider>
+          <ThemeContextProvider>
+            <ThemeProvider>
+              <Header />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </ThemeContextProvider>
+        </AuthProvider>
       </body>
     </html>
   );

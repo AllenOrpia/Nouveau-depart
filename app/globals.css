@@ -28,3 +28,12 @@
   justify-content: center;
   border-radius: 10px;
 }
+
+.ql-container {
+  font-size: 28px !important;
+
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before{
+  color: #b3b3b1;
+}

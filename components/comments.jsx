@@ -18,7 +18,7 @@ const Comments = () => {
             placeholder="Write a comment"
             className="w-full p-3 mb-3 outline-none text-black"
           ></textarea>
-          <button className="button bg-red-500">Post Comment</button>
+          <button className="button bg-red-400 text-white">Post Comment</button>
         </div>
       ) : (
         <Link href={"/login"} className="button bg-red-500 mb-12">Login to post a comment</Link>

@@ -12,7 +12,7 @@ const Featured = () => {
           <div className='flex-1  min-h-full relative h-[50rem]'>
             <Image 
             className='object-cover'
-            src={heroImg} alt='Picture of a cost' fill priority  />
+            src={heroImg} alt='Picture of a cost' fill  priority  />
           </div>
           <div className='flex-1 flex flex-col gap-5'>
             <h2 className=' text-lg sm:text-xl lg:text-2xl font-semibold'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod sapiente obcaecati itaque optio quibusdam, odit commodi dolore doloremque quos voluptas quia nihil libero, tenetur saepe iusto aspernatur numquam ut omnis?</h2>
