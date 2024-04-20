@@ -8,10 +8,24 @@ import "react-quill/dist/quill.bubble.css";
 import { CiImageOn } from "react-icons/ci";
 import { CiVideoOn } from "react-icons/ci";
 import { FaPlus } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 const WritePage = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
+
+  const { status} = useSession()
+    
+  const router = useRouter();
+
+  if (status === 'loading') {
+      return <div className="h-screen flex items-center justify-center">Loading...</div>
+  };
+
+  if (status === 'unauthenticated') {
+      router.push('/')
+  }
   return (
     <main className="container mx-auto h-screen p-12 sm:p-8 lg:p-0">
       <div className="flex flex-col gap-8 relative">
