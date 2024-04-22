@@ -12,37 +12,35 @@ import { FaLinkedin } from "react-icons/fa";
 const Header = () => {
   return (
     <header className="container mx-auto flex justify-between items-center min-h-[6rem] p-12 sm:p-8 lg:p-0 ">
-      <div id="socials" className="lg:flex gap-3 flex-1 hidden ">
+      <Link href={'/'} className="flex-1 font-bold text-3xl italic">
+          ND
+      </Link>
+      
+      <div
+        id="links"
+        className="flex flex-[2] items-center justify-end lg:justify-center gap-3 sm:gap-5  sm:text-lg lg:py-1 lg:bg-[#7fb88133]  lg:rounded-full "
+      >
+        <Link href={"/"} className="hidden lg:inline-block ">
+          Home
+        </Link>
+        <Link href={"#contact"} className="hidden lg:inline-block ">
+          Contact
+        </Link>
+        <Link href={"#about"} className="hidden lg:inline-block ">
+          About
+        </Link>
+        
+        
+          <AuthLinks />
+          <ThemeToggle />
+      </div>
+      <div id="socials" className="lg:flex justify-end gap-3 flex-1 hidden ">
         <Link href={'/'} className="p-2 border rounded-full hover:bg-gray-200">
           <FaInstagram className="w-6 h-6 text-[#bc2a8d] " />
         </Link>
         <Link href={'/'} className="p-2 border rounded-full hover:bg-gray-200">
           <FaLinkedin className="w-6 h-6 text-[#0077b5] " />
         </Link>
-      </div>
-      <span
-        id="logo"
-        className="flex-1  lg:text-center font-bold text-xl sm:text-3xl px-4 sm:px-0"
-      >
-        Nouveau Depart
-      </span>
-      <div
-        id="links"
-        className="flex flex-1 items-center justify-end gap-3 sm:gap-5 text-md sm:text-lg sm:px-0 "
-      >
-        <Link href={"/"} className="hidden sm:inline-block ">
-          Home
-        </Link>
-        <Link href={"#contact"} className="hidden sm:inline-block ">
-          Contact
-        </Link>
-        <Link href={"#about"} className="hidden sm:inline-block ">
-          About
-        </Link>
-        
-          <AuthLinks />
-          <ThemeToggle />
-        
       </div>
     </header>
   );

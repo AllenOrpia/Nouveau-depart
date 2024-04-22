@@ -27,21 +27,22 @@ const WritePage = () => {
       router.push('/')
   }
   return (
-    <main className="container mx-auto h-screen p-12 sm:p-8 lg:p-0">
-      <div className="flex flex-col gap-8 relative">
+    <main className="container mx-auto h-screen p-12 sm:p-8 lg:p-0 relative">
+      <div className="flex flex-col gap-8  ">
         <input type="text" placeholder="Title" className="outline-none py-12 border-none bg-transparent text-5xl placeholder-[#b3b3b1]" />
         <button onClick={() => setOpen(!open)} className="">
           <FaPlus className="text-3xl text-[#b3b3b1]" />
         </button>
         {open && (
-          <div className="flex gap-2 absolute z-10 w-full left-10">
-            <button className="w-12 h-12 p-2 border-2 border-gray-300 rounded-full">
+          
+          <div className="flex gap-2  z-10 w-full left-10">
+            <button className="w-12 h-12 p-2 border-2 border-gray-300 rounded-full hover:bg-gray-200">
               <CiImageOn className="text-3xl text-[#b3b3b1]" />
             </button >
-            <button className="w-12 h-12 p-2 border-2 border-gray-300 rounded-full">
+            <button className="w-12 h-12 p-2 border-2 border-gray-300 rounded-full hover:bg-gray-200">
               <CiImageOn className="text-3xl text-[#b3b3b1]" />
             </button>
-            <button className="w-12 h-12 p-2 border-2 border-gray-300 rounded-full">
+            <button className="w-12 h-12 p-2 border-2 border-gray-300 rounded-full hover:bg-gray-200">
               <CiVideoOn className="text-3xl text-[#b3b3b1]" />
             </button>
           </div>
@@ -52,7 +53,7 @@ const WritePage = () => {
           onChange={setValue}
           placeholder="Post a story..."
         />
-        <button className="absolute -top-2 lg:top-8 right-0 p-3 rounded-full bg-red-400 text-white cursor-pointer">Publish</button>
+        <button className="absolute top-0 right-[3rem] sm:right-[2rem] lg:right-0 p-3  rounded-full bg-red-400 text-white cursor-pointer hover:scale-110 hover:bg-red-500">Publish</button>
       </div>
     </main>
   );

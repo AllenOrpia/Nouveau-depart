@@ -20,7 +20,12 @@ const getData = async (page) => {
 
 const CardList = async ({ page }) => {
   
-  const data = await getData(page);
+  const { posts, count} = await getData(page);
+
+  const postPerPage = 4;
+  
+  const hasPrev = postPerPage * (page - 1) > 0;
+  const hasNext =  postPerPage * (page  - 1) + postPerPage < count;
 
   return (
     <div className=" flex-[5] my-12">
@@ -28,13 +33,13 @@ const CardList = async ({ page }) => {
       <div id="posts">
 
         {
-          data?.map( (item) => (
+          posts?.map( (item) => (
             <Card key={item._id} item={item} />
           ))
         }
         
       </div>
-      <Pagination />
+      <Pagination page={page} hasNext={hasNext} hasPrev={hasPrev} />
     </div>
   );
 };

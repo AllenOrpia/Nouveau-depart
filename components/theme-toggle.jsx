@@ -34,7 +34,7 @@ const ThemeToggle = () => {
     //   <Image src={sun} alt="sun logo" width={20} height={20} />
       
     // </div>
-    <div onClick={toggle} className="p-2 border rounded-full hover:bg-gray-200  "
+    <div onClick={toggle} className="p-2 border rounded-full hover:bg-gray-100  "
       
     >
         {

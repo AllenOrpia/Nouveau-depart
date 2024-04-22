@@ -25,7 +25,7 @@ const CategoryLinks = async () => {
   return (
     <>
       {data?.map((item) => (
-        <Link href={"/"} className={`category ${item.title}`} key={item._id}>
+        <Link href={"/"} className={`category ${item.title} hover:scale-105`} key={item._id}>
           {item.img && (
             <Image
               src={item.img}

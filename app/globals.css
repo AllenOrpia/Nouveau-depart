@@ -19,6 +19,16 @@
   border-radius: .25rem;
 }
 
+.paginationBtn {
+  color:white;
+  border: none;
+  width: 6rem;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  
+}
+
 .category {
   display: flex;
   align-items: center;
@@ -27,6 +37,7 @@
   height: 80px;
   justify-content: center;
   border-radius: 10px;
+  
 }
 
 .style {

@@ -10,7 +10,7 @@ export default function Home({searchParams}) {
     <div className="container mx-auto flex min-h-screen flex-col p-12 sm:p-8 lg:p-0">
         <Featured />
         <CategoryList />
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-col lg:flex-row gap-12" id="menu">
           <CardList page={page} />
           <Menu />
         </div>

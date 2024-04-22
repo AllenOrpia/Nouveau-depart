@@ -14,17 +14,17 @@ const AuthLinks = () => {
   return (
     <>
       {status === "unauthenticated" ? (
-        <Link href={"/login"} className="sm:inline-block hidden">Login</Link>
+        <Link href={"/login"} className="lg:inline-block hidden">Login</Link>
       ) : (
         <>
-          <Link href={"/write"} className="sm:inline-block hidden">Post</Link>
-          <button className=" cursor-pointer sm:inline-block hidden" onClick={signOut}>Log Out</button>
+          <Link href={"/write"} className="lg:inline-block hidden">Post</Link>
+          <button className=" cursor-pointer lg:inline-block hidden" onClick={signOut}>Log Out</button>
         </>
       )}
       <div
         onClick={() => setOpen(!open)}
         id="burger"
-        className=" cursor-pointer sm:hidden 0"
+        className=" cursor-pointer lg:hidden 0"
       >
         <RxHamburgerMenu className="w-5 h-5"/>
         {/* <div className="line"

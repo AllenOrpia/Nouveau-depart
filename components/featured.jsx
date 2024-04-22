@@ -6,7 +6,7 @@ const Featured = () => {
   return (
     <section className=' mt-8'>
         <h1 className='text-5xl font-light'>
-          <span className='font-bold'>Hey, I'm Allen!</span> Discover my stories and journey as I explore new hobbies!
+          <span className='font-bold '>Hello, I'm Allen!</span> Discover my stories and journey as well as others as we embark on new beginnings!
         </h1>
         <div className='flex flex-col lg:flex-row items-center mt-16 gap-12'>
           <div className='flex-1  min-h-full relative h-[50rem]'>
