@@ -27,11 +27,11 @@ const Footer = () => {
         <div className=" flex flex-col gap-2 ">
           <span className="text-lg font-semibold underline underline-offset-2">Socials</span>
           <Link href={"/"}>
-            <Image src={instagram} width={28} height={28} className="inline-block"/>
+            <Image src={instagram} width={28} height={28} alt="Instagram Logo" className="inline-block"/>
             <span className="px-2">Instagram</span>
           </Link>
           <Link href={"/"}>
-            <Image src={Linkedin} width={28} height={28} className="inline-block"/>
+            <Image src={Linkedin} width={28} height={28} alt="Linkedin logo" className="inline-block"/>
             <span className="px-2">Linkedin</span>
           </Link>
         </div>

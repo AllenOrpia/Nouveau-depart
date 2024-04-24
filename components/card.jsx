@@ -13,7 +13,7 @@ const Card = ({ key, item }) => {
         {
           item.img && (
             <div className="flex-1 h-96 relative">
-              <Image src={item.img} className="object-cover " alt="" fill />
+              <Image src={item.img} className="object-cover " alt="Blog Image" fill />
             </div>
 
           )

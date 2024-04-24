@@ -39,13 +39,13 @@ const SinglePage = async ({ params }) => {
       >
         <div className="flex-1 flex flex-col gap-3">
           <h1 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4">
-            {data.title}
+            {data?.title}
           </h1>
           <div className="flex items-center gap-3">
             {data?.user?.image && (
               <Image
                 src={data.user.image}
-                alt=""
+                alt="User Image"
                 width={50}
                 height={50}
                 className="rounded-full  mr-3 w-12 h-12"
@@ -54,7 +54,7 @@ const SinglePage = async ({ params }) => {
 
             <div className="flex flex-col ">
               <span className="text-gray-400">{ data?.user.name }</span>
-              <span className="text-gray-400">{ data.createdAt.substring(0,10) }</span>
+              <span className="text-gray-400">{ data?.createdAt?.substring(0,10) }</span>
             </div>
           </div>
         </div>
@@ -62,12 +62,11 @@ const SinglePage = async ({ params }) => {
           {
             data?.img && (
               <Image
-                src={ data?.img }
-                alt=""
+                src={ data.img }
+                alt="Post image"
                 fill
-                objectFit="cover"
                 priority
-                className=" "
+                className=" object-cover"
               />
 
             )

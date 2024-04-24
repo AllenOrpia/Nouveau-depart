@@ -39,7 +39,7 @@ const Header = () => {
           <FaInstagram className="w-6 h-6 text-[#bc2a8d] " />
         </Link>
         <Link href={'/'} className="p-2 border rounded-full hover:bg-gray-200">
-          <FaLinkedin className="w-6 h-6 text-[#0077b5] " />
+          <FaLinkedin className="w-6 h-6 text-[#0077b5]  " />
         </Link>
       </div>
     </header>

@@ -11,8 +11,10 @@ const MenuItems = ({ withImage }) => {
           <div className="flex-[1] relative aspect-[1/1] ">
             <Image
               src={culture}
-              alt=""
+              alt="Image"
               fill
+              width={0}
+              height={0}
               className="object-cover rounded-[50%] border-2 border-gray-400"
             />
           </div>
