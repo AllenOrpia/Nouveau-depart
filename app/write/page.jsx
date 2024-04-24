@@ -53,7 +53,7 @@ const WritePage = () => {
           onChange={setValue}
           placeholder="Post a story..."
         />
-        <button className="absolute top-0 right-[3rem] sm:right-[2rem] lg:right-0 p-3  rounded-full bg-red-400 text-white cursor-pointer hover:scale-110 hover:bg-red-500">Publish</button>
+        <button className="absolute top-1 right-[3rem] sm:right-[2rem] lg:right-0 p-3  rounded-full bg-red-400 text-white cursor-pointer hover:scale-110 hover:bg-red-500">Publish</button>
       </div>
     </main>
   );

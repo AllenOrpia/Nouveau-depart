@@ -34,7 +34,7 @@ const ThemeToggle = () => {
     //   <Image src={sun} alt="sun logo" width={20} height={20} />
       
     // </div>
-    <div onClick={toggle} className="p-2 border rounded-full hover:bg-gray-100  "
+    <div onClick={toggle} className={`p-2 border rounded-full transition-all ${theme === 'dark' ? 'bg-gray-200 hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-100' : 'hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-yellow-400 '}`}
       
     >
         {
@@ -43,7 +43,7 @@ const ThemeToggle = () => {
             <BsMoonStars className="w-5 h-5 text-blue-400"/>
           ) :
           (
-            <IoSunnyOutline className="w-5 h-5 text-yellow-600"/>
+            <IoSunnyOutline className="w-5 h-5 text-yellow-500"/>
           )
         }
     </div>

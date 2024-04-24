@@ -1,4 +1,4 @@
-import React from "react";
+
 import Image from "next/image";
 import instagram from "@/public/instagram.png";
 import linkedin from "@/public/LI-In-Bug.png";
@@ -11,20 +11,20 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className="container mx-auto flex justify-between items-center min-h-[6rem] p-12 sm:p-8 lg:p-0 ">
+    <header className="container mx-auto flex justify-between items-center min-h-[6rem] p-12 sm:p-8 lg:p-0 border-b-2  ">
       <Link href={'/'} className="flex-1 font-bold text-3xl italic">
           ND
       </Link>
       
       <div
         id="links"
-        className="flex flex-[2] items-center justify-end lg:justify-center gap-3 sm:gap-5  sm:text-lg lg:py-1 lg:bg-[#7fb88133]  lg:rounded-full "
+        className="flex flex-[2] items-center justify-end lg:justify-center gap-3 sm:gap-5  sm:text-lg lg:py-1  "
       >
         <Link href={"/"} className="hidden lg:inline-block ">
           Home
         </Link>
         <Link href={"#contact"} className="hidden lg:inline-block ">
-          Contact
+          Blogs
         </Link>
         <Link href={"#about"} className="hidden lg:inline-block ">
           About

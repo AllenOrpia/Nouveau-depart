@@ -17,7 +17,7 @@ const AuthLinks = () => {
         <Link href={"/login"} className="lg:inline-block hidden">Login</Link>
       ) : (
         <>
-          <Link href={"/write"} className="lg:inline-block hidden">Post</Link>
+          <Link href={"/write"} className="lg:inline-block hidden">Write</Link>
           <button className=" cursor-pointer lg:inline-block hidden" onClick={signOut}>Log Out</button>
         </>
       )}
@@ -26,7 +26,10 @@ const AuthLinks = () => {
         id="burger"
         className=" cursor-pointer lg:hidden 0"
       >
-        <RxHamburgerMenu className="w-5 h-5"/>
+        <button className="p-2 border rounded-full hover:bg-gray-200 ">
+
+          <RxHamburgerMenu className="w-5 h-5"/>
+        </button>
         {/* <div className="line"
         style={
           theme === 'dark'
