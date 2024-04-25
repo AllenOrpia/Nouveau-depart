@@ -30,24 +30,7 @@ const AuthLinks = () => {
 
           <RxHamburgerMenu className="w-5 h-5"/>
         </button>
-        {/* <div className="line"
-        style={
-          theme === 'dark'
-            ? {background: 'white'} 
-            : {background: '#0f172a'}
-        }></div>
-        <div className="line"
-        style={
-          theme === 'dark'
-            ? {background: 'white'} 
-            : {background: '#0f172a'}
-        }></div>
-        <div className="line"
-        style={
-          theme === 'dark'
-            ? {background: 'white'} 
-            : {background: '#0f172a'}
-        }></div> */}
+      
 
       </div>
       {open && (
@@ -60,14 +43,13 @@ const AuthLinks = () => {
             : {background: 'rgb(249 250 251/1)'}
         }>
           <Link href={"/"}>Home</Link>
-          <Link href={"#about"}>About</Link>
-          <Link href={"/"}>Contact</Link>
-          {status === "notauthenticated" ? (
+          <Link href={"/about"}>About</Link>
+          {status === "unauthenticated" ? (
             <Link href={"/login"}>Login</Link>
           ) : (
             <>
-              <Link href={"/write"}>Post</Link>
-              <span className=" cursor-pointer">Log Out</span>
+              <Link href={"/write"}>Write</Link>
+              <span className=" cursor-pointer" onClick={signOut}>Log Out</span>
             </>
           )}
         </div>

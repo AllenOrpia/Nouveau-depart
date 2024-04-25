@@ -57,6 +57,7 @@ const SinglePage = async ({ params }) => {
               <span className="text-gray-400">{ data?.createdAt?.substring(0,10) }</span>
             </div>
           </div>
+            <div className="" dangerouslySetInnerHTML={markup} />
         </div>
         <div className="flex-1 relative h-[30rem]">
           {
@@ -75,8 +76,8 @@ const SinglePage = async ({ params }) => {
       </section>
 
       <section className=" flex gap-5">
-        <div className="flex-[5] my-12 flex-col gap-8" >
-          <div className="" dangerouslySetInnerHTML={markup} />
+        <div className="flex-[5] my-12 " >
+          <h2 className="mb-12 text-xl sm:text-3xl font-bold">Comments</h2>
           <Comments postSlug={slug} />
         </div>
         <Menu className=" flex-[2]" />

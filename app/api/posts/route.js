@@ -10,7 +10,7 @@ export const GET = async(req) => {
     const cat = searchParams.get("cat");
 
     const postPerPage = 4;
-
+    
     const query = {
         take: postPerPage,
         skip: postPerPage * (page - 1),

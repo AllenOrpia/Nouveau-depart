@@ -147,9 +147,9 @@ const WritePage = () => {
                   <CiImageOn className="text-3xl text-[#b3b3b1]" />
                 </label>
               </button>
-              <button className="w-12 h-12 p-2 border-2 border-gray-300 rounded-full hover:bg-gray-200">
+              {/* <button className="w-12 h-12 p-2 border-2 border-gray-300 rounded-full hover:bg-gray-200">
                 <CiImageOn className="text-3xl text-[#b3b3b1]" />
-              </button>
+              </button> */}
               <button className="w-12 h-12 p-2 border-2 border-gray-300 rounded-full hover:bg-gray-200">
                 <CiVideoOn className="text-3xl text-[#b3b3b1]" />
               </button>

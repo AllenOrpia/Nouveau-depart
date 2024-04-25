@@ -46,7 +46,6 @@ const Comments = ({ postSlug }) => {
   
   return (
     <div className="mt-12">
-      <h2 className="text-xl font-semibold mb-3">Comments</h2>
       { status === 'unauthenticated' ? (
           <Link href={"/login"} className="button bg-red-500 mb-12">Login to post a comment</Link>
       ) : (

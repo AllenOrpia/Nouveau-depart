@@ -13,23 +13,18 @@ const Menu = () => {
       <div>
         <MenuTitle subheading={"What's hot"} heading={"Most Popular"} />
         <div className="flex flex-col gap-8 my-8">
-          <MenuItems withImage={false} />
+          <MenuItems  />
         </div>
       </div>
-
+      
       <div className="">
         <MenuTitle subheading={"Explore"} heading={"Categories"} />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-2 mb-8">
           <CategoryLinks />
         </div>
       </div>
 
-      <div>
-        <MenuTitle subheading={"Recommendations"} heading={"Editor's top picks"}/>
-        <div className="flex flex-col gap-8 my-8">
-          <MenuItems withImage={true} />
-        </div>
-      </div>
+    
     </div>
   );
 };

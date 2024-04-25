@@ -23,7 +23,7 @@ const Card = ({  item }) => {
         <Link href={`/posts/${item.slug}`}>
           <h3 className="text-3xl font-bold">{item.title}</h3>
         </Link>
-        <p className="text-lg">{item.desc.substring(0,60)}</p>
+        <p className="text-lg">{item.desc.substring(0,150)}...</p>
         <div>
           <span className="text-gray-400">{item.createdAt.substring(0,10)} - </span>
           <span className="text-red-500 font-medium text-lg">

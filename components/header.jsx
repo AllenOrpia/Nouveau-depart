@@ -23,9 +23,10 @@ const Header = () => {
         <Link href={"/"} className="hidden lg:inline-block ">
           Home
         </Link>
-        <Link href={'/blogs'} className="hidden lg:inline-block ">
+        <Link href={"/posts"} className="hidden lg:inline-block ">
           Blogs
         </Link>
+        
         <Link href={"/about"} className="hidden lg:inline-block ">
           About
         </Link>
