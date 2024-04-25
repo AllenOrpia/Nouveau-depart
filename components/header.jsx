@@ -11,7 +11,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className="container mx-auto flex justify-between items-center min-h-[6rem] p-12 sm:p-8 lg:p-0 border-b-2  ">
+    <header className="container mx-auto flex justify-between items-center min-h-[6rem] p-12 sm:p-8 lg:p-0  ">
       <Link href={'/'} className="flex-1 font-bold text-3xl italic">
           ND
       </Link>
@@ -23,10 +23,10 @@ const Header = () => {
         <Link href={"/"} className="hidden lg:inline-block ">
           Home
         </Link>
-        <Link href={"#contact"} className="hidden lg:inline-block ">
+        <Link href={'/blogs'} className="hidden lg:inline-block ">
           Blogs
         </Link>
-        <Link href={"#about"} className="hidden lg:inline-block ">
+        <Link href={"/about"} className="hidden lg:inline-block ">
           About
         </Link>
         

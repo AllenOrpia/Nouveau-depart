@@ -3,17 +3,17 @@ import Image from "next/image";
 import culture from "@/public/culture.png";
 import Link from "next/link";
 
-const Card = ({ key, item }) => {
+const Card = ({  item }) => {
   return (
     <div
       id="post"
-      className="mb-12 flex flex-col lg:flex-row items-center gap-10"
-      key={key}
+      className="mb-12 flex flex-col lg:flex-row items-center gap-10 group "
+      key={item._id}
     >
         {
           item.img && (
             <div className="flex-1 h-96 relative">
-              <Image src={item.img} className="object-cover " alt="Blog Image" fill />
+              <Image src={item.img} className="object-cover absolute " alt="Blog Image" fill sizes="" />
             </div>
 
           )

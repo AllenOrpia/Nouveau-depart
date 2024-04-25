@@ -75,7 +75,7 @@ const SinglePage = async ({ params }) => {
       </section>
 
       <section className=" flex gap-5">
-        <div className="flex-[5] my-12" >
+        <div className="flex-[5] my-12 flex-col gap-8" >
           <div className="" dangerouslySetInnerHTML={markup} />
           <Comments postSlug={slug} />
         </div>

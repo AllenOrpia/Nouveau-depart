@@ -34,7 +34,9 @@ const CardList = async ({ page, cat }) => {
 
         {
           posts?.map( (item) => (
-            <Card key={item._id} item={item} />
+            <React.Fragment key={item._id}>
+              <Card item={item} />
+            </React.Fragment>
           ))
         }
         

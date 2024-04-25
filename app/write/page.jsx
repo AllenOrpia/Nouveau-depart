@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
 
@@ -17,6 +17,7 @@ import {
   uploadBytesResumable,
   getDownloadURL,
 } from "firebase/storage";
+import { ThemeContext } from "@/context/theme-context";
 
 const storage = getStorage(app);
 
@@ -27,13 +28,15 @@ const WritePage = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
+  
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     const upload = () => {
       const name = new Date().getTime + file.name;
       const storageRef = ref(storage, file.name);
 
-      const uploadTask = uploadBytesResumable(storageRef, name);
+      const uploadTask = uploadBytesResumable(storageRef, file);
 
       uploadTask.on(
         "state_changed",
@@ -124,10 +127,10 @@ const WritePage = () => {
               onChange={(e) => setFile(e.target.files[0])}
               className=" hidden"
             />
-            <label htmlFor="category">Select Category</label>
+            <label htmlFor="category" className="text-2xl text-[#b3b3b1]">Select Category</label>
             <select
               id="category"
-              className="w-1/4 text-black"
+              className={`w-1/4 text-[#b3b3b1] ${ theme === 'dark' ? "bg-[#0f172a] outline-1 outline" : "bg-gray-50 outline outline-1"} `}
               placeholder="Select Category"
               onChange={(e) => setCatSlug(e.target.value)}
             >
