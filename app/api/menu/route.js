@@ -6,8 +6,8 @@ export const GET = async () => {
 
   const query = {
       take: postPerPage,
-      where: {
-          views: { gt: 5}
+      orderBy: {
+          views: 'desc'
       },
       include: {
         user: true
