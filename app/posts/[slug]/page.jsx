@@ -2,9 +2,7 @@ import Comments from "@/components/comments";
 import Menu from "@/components/menu";
 import Image from "next/image";
 import React from "react";
-import { Remarkable } from 'remarkable';
-
-const md = new Remarkable();
+import ReactMarkdown from 'react-markdown';
 
 const getData = async (slug) => {
   const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
@@ -21,15 +19,6 @@ const getData = async (slug) => {
 const SinglePage = async ({ params }) => {
   const { slug } = params;
   const data = await getData(slug);
-
-  const renderMarkdownToHTML = (markdown) => {
-    const renderedHTML = md.render(markdown);
-    return {__html: renderedHTML};
-  };
-
-  const markup = renderMarkdownToHTML(data?.desc)
-
-  
 
   return (
     <main className="container mx-auto  p-12 sm:p-8 lg:p-0 mt-28">
@@ -57,7 +46,8 @@ const SinglePage = async ({ params }) => {
               <span className="text-gray-400">{ data?.createdAt?.substring(0,10) }</span>
             </div>
           </div>
-            <div className="" dangerouslySetInnerHTML={markup} />
+            
+            <ReactMarkdown>{data?.desc}</ReactMarkdown>
         </div>
         <div className="flex-1 relative h-[30rem]">
           {

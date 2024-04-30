@@ -29,11 +29,11 @@ const Footer = () => {
           <span className="text-lg font-semibold underline underline-offset-2">
             Socials
           </span>
-          <Link href={"/"} className="flex gap-2">
+          <Link href={"https://www.instagram.com/orpiaallen/"} className="flex gap-2">
             <FaInstagram className="w-6 h-6 text-[#bc2a8d]" />
             <span>Instagram</span>
           </Link>
-          <Link href={"/"} className="flex gap-2">
+          <Link href={"https://www.linkedin.com/in/allen-orpia-386b2213b/"} className="flex gap-2">
             <FaLinkedin className="w-6 h-6 text-[#0077b5]" />
             <span>Linkedin</span>
           </Link>

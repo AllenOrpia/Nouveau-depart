@@ -36,10 +36,10 @@ const Header = () => {
           <ThemeToggle />
       </div>
       <div id="socials" className="lg:flex justify-end gap-3 flex-1 hidden ">
-        <Link href={'/'} className="p-2 border rounded-full hover:bg-gray-200">
+        <Link href={'https://www.instagram.com/orpiaallen/'} className="p-2 border rounded-full hover:bg-gray-200">
           <FaInstagram className="w-6 h-6 text-[#bc2a8d] " />
         </Link>
-        <Link href={'/'} className="p-2 border rounded-full hover:bg-gray-200">
+        <Link href={'https://www.linkedin.com/in/allen-orpia-386b2213b/'} className="p-2 border rounded-full hover:bg-gray-200">
           <FaLinkedin className="w-6 h-6 text-[#0077b5]  " />
         </Link>
       </div>
