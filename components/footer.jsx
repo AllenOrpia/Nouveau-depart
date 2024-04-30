@@ -12,7 +12,7 @@ const Footer = () => {
         <p>
           Where every story marks a new beginning. Join us on our journey of
           exploration, growth, and shared experiences. Your stories matter here.
-          Start writing and let's embark on new adventures together.
+          Start writing and lets embark on new adventures together.
         </p>
       </div>
       <div className="flex-1 flex justify-start md:justify-end gap-4 md:gap-28">

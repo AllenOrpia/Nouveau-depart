@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 const AboutPage = () => {
   return (
@@ -10,11 +10,11 @@ const AboutPage = () => {
         At Nouveau Depart, we believe in the power of storytelling to inspire,
         connect, and transform. Our platform is a sanctuary for those seeking
         new beginnings, a place where personal narratives are celebrated and
-        shared. Whether it's tales of triumph, moments of vulnerability, or
-        reflections on life's twists and turns, our blog is a canvas for your
+        shared. Whether it is tales of triumph, moments of vulnerability, or
+        reflections on lifes twists and turns, our blog is a canvas for your
         stories. Join us as we embark on this journey of self-discovery,
         resilience, and the endless possibilities that come with each new
-        chapter. Together, let's create a tapestry of experiences that uplift
+        chapter. Together, let us create a tapestry of experiences that uplift
         and unite us all.
       </p>
      

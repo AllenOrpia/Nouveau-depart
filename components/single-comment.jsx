@@ -7,6 +7,7 @@ const SingleComment = ({ item }) => {
       <div className="flex gap-2 items-center">
         {item?.user?.image && (
           <Image
+            alt="user image"
             src={item?.user?.image}
             width={50}
             height={50}
