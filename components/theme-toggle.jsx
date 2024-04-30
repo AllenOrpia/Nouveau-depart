@@ -1,52 +1,52 @@
 "use client";
 
-import React, { useContext } from "react";
-import Image from "next/image";
-import moon from "@/public/moon.png";
-import sun from "@/public/sun.png";
-import { ThemeContext } from "@/context/theme-context";
+import React, { useContext, useEffect, useState} from "react";
+
 import { IoSunnyOutline } from "react-icons/io5";
 import { BsMoonStars } from "react-icons/bs";
 
 const ThemeToggle = () => {
-  const { theme, toggle } = useContext(ThemeContext);
+  const [theme,setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+      window.localStorage.setItem('theme', "dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      setTheme('light');
+      window.localStorage.setItem('theme', "light");
+      document.documentElement.classList.remove("dark");
+    };
+  };
+
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem('theme') || null;
+    if (localTheme) {
+      setTheme(localTheme);
+      if (localTheme === 'dark') {
+        document.documentElement.classList.add("dark");
+      };
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+      document.documentElement.classList.add("dark");
+    }
+  }, [])
+ 
 
   return (
-    // <div
-
-    //   onClick={toggle}
-    //   className="w-[3rem] h-[1.5rem] rounded-[50px] cursor-pointer flex items-center justify-between relative transition-all "
-    //   style={
-    //     theme === 'dark'
-    //       ? {background: 'white'} 
-    //       : {background: '#0f172a'}
-    //   }
-    // >
-    //   <Image src={moon} alt="moon logo" width={20} height={20}  />
-    //   <div
-    //     style={
-    //       theme === "dark"
-    //         ? { left: 2, background: "#0f172a" }
-    //         : { right: 2, background: 'white' }
-    //     }
-    //     className="w-[1.1rem] h-[1.1rem] rounded-[50%] absolute transition-all z-50"
-    //   ></div>
-    //   <Image src={sun} alt="sun logo" width={20} height={20} />
-      
-    // </div>
-    <div onClick={toggle} className={`p-2 border rounded-full transition-all ${theme === 'dark' ? 'bg-gray-200   hover:shadow-lg hover:shadow-gray-100 hover:animate-bounce' : '  hover:shadow-lg hover:shadow-yellow-400 hover:animate-bounce '}`}
-      
-    >
+   
+  
+      <button className={`fixed bottom-8 right-8  h-12 w-12 bg-opacity-80 backdrop-blur-[0.5rem] border-white border-opacity-40 flex items-center justify-center rounded-full hover:scale-125 active:scale-100 transition-all ${theme === 'dark' ? 'bg-gray-100 text-blue-400' : 'bg-[#ffb04f45]' }`}
+      onClick={toggleTheme}>
         {
-          theme === 'dark' ? 
-          (
-            <BsMoonStars className="w-5 h-5 text-blue-400"/>
-          ) :
-          (
-            <IoSunnyOutline className="w-5 h-5 text-yellow-500"/>
-          )
+          theme === 'light' ? 
+          < IoSunnyOutline />
+          : 
+          <BsMoonStars />
         }
-    </div>
+      </button>
+  
   );
 };
 

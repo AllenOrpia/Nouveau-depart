@@ -22,8 +22,8 @@ const Hero = () => {
             <h2 className=' text-xl sm:text-2xl lg:text-4xl font-semibold'>Embark on a Journey of Discovery and Inspiration</h2>
             <p className='text-lg sm:text-xl md:text-2xl font-light'>A haven for those seeking inspiration, connection, and the courage to embrace change. Dive into a world of shared experiences, where each tale holds the power to uplift, inspire, and transform.</p>
            
-            <span className='text-lg text-gray-500'>Start your journey today</span>
-            <Link href={'/posts'} className='button w-max bg-red-400  text-white animate-bounce'>Explore</Link>
+           
+            <Link href={'/posts'} className='button w-max bg-red-400  text-white animate-bounce'>Start Reading</Link>
 
             
           </div>

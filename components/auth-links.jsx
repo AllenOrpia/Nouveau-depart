@@ -2,13 +2,12 @@
 
 import React, { useState, useContext } from "react";
 import Link from "next/link";
-import { ThemeContext } from "@/context/theme-context";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { signOut, useSession } from "next-auth/react";
 
 const AuthLinks = () => {
   const [open, setOpen] = useState(false);
-  const { theme, toggle } = useContext(ThemeContext);
+  
 
   const { status } = useSession();
   return (

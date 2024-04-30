@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useContext, useEffect, useState } from "react";
-import ReactQuill from "react-quill";
+
 import "react-quill/dist/quill.bubble.css";
 
 import { CiImageOn } from "react-icons/ci";
@@ -17,19 +17,27 @@ import {
   uploadBytesResumable,
   getDownloadURL,
 } from "firebase/storage";
-import { ThemeContext } from "@/context/theme-context";
+import dynamic from "next/dynamic";
+
 
 const storage = getStorage(app);
 
 const WritePage = () => {
+  const ReactQuill = dynamic( () => import('react-quill'), { ssr: false});
+
+  const { status } = useSession();
+  const router = useRouter();
+
   const [file, setFile] = useState(null);
   const [open, setOpen] = useState(false);
   const [media, setMedia] = useState("");
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
+
   
-  const { theme } = useContext(ThemeContext);
+  
+  
 
   useEffect(() => {
     const upload = () => {
@@ -65,9 +73,7 @@ const WritePage = () => {
     file && upload();
   }, [file]);
 
-  const { status } = useSession();
-
-  const router = useRouter();
+ 
 
   if (status === "loading") {
     return (
@@ -130,7 +136,7 @@ const WritePage = () => {
             <label htmlFor="category" className="text-2xl text-[#b3b3b1]">Select Category</label>
             <select
               id="category"
-              className={`w-1/4 text-[#b3b3b1] ${ theme === 'dark' ? "bg-[#0f172a] outline-1 outline" : "bg-gray-50 outline outline-1"} `}
+              className={`w-1/4 text-[#b3b3b1]`}
               placeholder="Select Category"
               onChange={(e) => setCatSlug(e.target.value)}
             >
@@ -147,21 +153,19 @@ const WritePage = () => {
                   <CiImageOn className="text-3xl text-[#b3b3b1]" />
                 </label>
               </button>
-              {/* <button className="w-12 h-12 p-2 border-2 border-gray-300 rounded-full hover:bg-gray-200">
-                <CiImageOn className="text-3xl text-[#b3b3b1]" />
-              </button> */}
               <button className="w-12 h-12 p-2 border-2 border-gray-300 rounded-full hover:bg-gray-200">
                 <CiVideoOn className="text-3xl text-[#b3b3b1]" />
               </button>
             </div>
           </div>
         )}
-        <ReactQuill
+         <ReactQuill
+        
           theme="bubble"
           value={value}
           onChange={setValue}
-          placeholder="Post a story..."
-        />
+          placeholder="Tell your story..."
+        ></ReactQuill>
         <button
           onClick={handleSubmit}
           type="submit"

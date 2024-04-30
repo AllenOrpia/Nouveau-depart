@@ -2,9 +2,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ThemeContextProvider from "@/context/theme-context";
-import ThemeProvider from "@/providers/theme-provider";
+
+
 import AuthProvider from "@/providers/auth-provider";
+import ThemeToggle from "@/components/theme-toggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,17 +18,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 min-w-[100vw] `}
+        className={`${inter.className} bg-gray-50 text-gray-950 min-w-[100vw] dark:bg-[#0f172a] dark:text-[#ddd] dark:text-opacity-90`}
       >
         <AuthProvider>
-          <ThemeContextProvider>
-            <ThemeProvider>
               <Header />
               {children}
               <Footer />
-            </ThemeProvider>
-          </ThemeContextProvider>
         </AuthProvider>
+        < ThemeToggle />
       </body>
     </html>
   );

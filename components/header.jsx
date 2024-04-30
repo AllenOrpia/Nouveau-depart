@@ -33,7 +33,7 @@ const Header = () => {
         
         
           <AuthLinks />
-          <ThemeToggle />
+          
       </div>
       <div id="socials" className="lg:flex justify-end gap-3 flex-1 hidden ">
         <Link href={'https://www.instagram.com/orpiaallen/'} className="p-2 border rounded-full hover:bg-gray-200">
