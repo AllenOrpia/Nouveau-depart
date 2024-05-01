@@ -37,7 +37,7 @@ const ThemeToggle = () => {
   return (
    
   
-      <button className={`fixed bottom-8 right-8  h-12 w-12 bg-opacity-80 backdrop-blur-[0.5rem] border-white border-opacity-40 flex items-center justify-center rounded-full hover:scale-125 active:scale-100 transition-all ${theme === 'dark' ? 'bg-gray-100 text-blue-400' : 'bg-[#ffb04f45]' }`}
+      <button className={`z-50 fixed bottom-8 right-8  h-12 w-12 bg-opacity-80  backdrop-blur-[0.5rem] border-white border-opacity-40 flex items-center justify-center rounded-full hover:scale-125 active:scale-100 transition-all ${theme === 'dark' ? 'bg-gray-100 text-blue-400 ' : 'bg-[#ffb04f45] ' }`}
       onClick={toggleTheme}>
         {
           theme === 'light' ? 

@@ -13,11 +13,11 @@ const AuthLinks = () => {
   return (
     <>
       {status === "unauthenticated" ? (
-        <Link href={"/login"} className="lg:inline-block hidden ">Login</Link>
+        <Link href={"/login"} className="lg:inline-block hidden hover:scale-125  ">Login</Link>
       ) : (
         <>
-          <Link href={"/write"} className="lg:inline-block hidden">Write</Link>
-          <button className=" cursor-pointer lg:inline-block hidden" onClick={signOut}>Log Out</button>
+          <Link href={"/write"} className="lg:inline-block hidden hover:scale-125 ">Write</Link>
+          <button className=" cursor-pointer lg:inline-block hidden hover:scale-125 " onClick={signOut}>Log Out</button>
         </>
       )}
       <div
@@ -33,14 +33,9 @@ const AuthLinks = () => {
 
       </div>
       {open && (
-        <div className="absolute top-[100px] left-0 bg-gray-50 h-[calc(100vh-100px)] w-full flex flex-col items-center justify-center gap-10 text-xl font-bold z-50
-        "
-        onClick={() => setOpen(!open)}
-        style={
-          theme === 'dark'
-            ? {background: '#0f172a'} 
-            : {background: 'rgb(249 250 251/1)'}
-        }>
+        <div className="absolute top-[100px] left-0 bg-gray-50 h-[calc(100vh-100px)] w-full flex flex-col items-center justify-center gap-10 text-xl font-bold z-40
+        dark:bg-[#0f172a]"
+       >
           <Link href={"/"}>Home</Link>
           <Link href={"/about"}>About</Link>
           {status === "unauthenticated" ? (

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useMemo } from "react";
 
 import "react-quill/dist/quill.bubble.css";
 
@@ -20,10 +20,12 @@ import {
 import dynamic from "next/dynamic";
 
 
+
 const storage = getStorage(app);
 
 const WritePage = () => {
-  const ReactQuill = dynamic( () => import('react-quill'), { ssr: false});
+  const ReactQuill =  useMemo( () => dynamic( () => import('react-quill'), { ssr: false,
+  loading: () => <p>Loading...</p>}), [])
 
   const { status } = useSession();
   const router = useRouter();
@@ -34,6 +36,7 @@ const WritePage = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
+  
 
   
   
@@ -159,13 +162,12 @@ const WritePage = () => {
             </div>
           </div>
         )}
-         <ReactQuill
-        
+         < ReactQuill
           theme="bubble"
           value={value}
           onChange={setValue}
           placeholder="Tell your story..."
-        ></ReactQuill>
+        />
         <button
           onClick={handleSubmit}
           type="submit"

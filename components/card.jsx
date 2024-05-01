@@ -7,7 +7,7 @@ const Card = ({  item }) => {
   return (
     <div
       id="post"
-      className="mb-12 flex flex-col lg:flex-row items-center gap-10 group "
+      className="mb-12 flex flex-col lg:flex-row items-start lg:items-center gap-10 group "
       key={item._id}
     >
         {
@@ -34,6 +34,7 @@ const Card = ({  item }) => {
           Read More
         </Link>
       </div>
+     
     </div>
   );
 };
