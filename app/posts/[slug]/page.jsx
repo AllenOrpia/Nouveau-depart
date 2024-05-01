@@ -5,7 +5,7 @@ import React from "react";
 import ReactMarkdown from 'react-markdown';
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+  const res = await fetch(`https://nouveau-depart-pearl.vercel.app//api/posts/${slug}`, {
     cache: "no-store",
   });
 

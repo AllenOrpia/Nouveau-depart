@@ -9,7 +9,7 @@ import culture from "@/public/culture.png";
 import Image from "next/image";
 
 const getData = async () => {
-  const res = await fetch("http:localhost:3000/api/categories", {
+  const res = await fetch("https://nouveau-depart-pearl.vercel.app/api/categories", {
     cache: "no-store",
   });
 

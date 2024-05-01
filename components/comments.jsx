@@ -27,7 +27,7 @@ const Comments = ({ postSlug }) => {
   
   
   const { data, mutate, isLoading } = useSWR(
-    `http://localhost:3000/api/comments?postSlug=${postSlug}`,
+    `https://nouveau-depart-pearl.vercel.app/api/comments?postSlug=${postSlug}`,
     fetcher
   );
 
@@ -35,7 +35,7 @@ const Comments = ({ postSlug }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await fetch("http://localhost:3000/api/comments", {
+    await fetch("https://nouveau-depart-pearl.vercel.app/api/comments", {
       method: "POST",
       body: JSON.stringify({ desc, postSlug }),
     });
